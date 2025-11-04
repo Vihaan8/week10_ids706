@@ -1,0 +1,31 @@
+{"timestamp":"2025-11-04T07:04:59.436601Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-11-04T07:04:59.436915Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/netflix_pipeline_spark.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-11-04T07:04:59.453216Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/netflix_pipeline_spark.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2025-11-04T07:04:59.497848Z","level":"info","event":"🚀 Initializing PySpark...","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:04:59.512803Z","level":"error","event":"/home/airflow/.local/lib/python3.12/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found","logger":"task.stderr"}
+{"timestamp":"2025-11-04T07:05:00.158431Z","level":"error","event":"Setting default log level to \"WARN\".","logger":"task.stderr"}
+{"timestamp":"2025-11-04T07:05:00.158691Z","level":"error","event":"To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).","logger":"task.stderr"}
+{"timestamp":"2025-11-04T07:05:00.270945Z","level":"error","event":"25/11/04 07:05:00 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable","logger":"task.stderr"}
+{"timestamp":"2025-11-04T07:05:00.660352Z","level":"info","event":"✅ PySpark initialized! Version: 3.5.0","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:02.616703Z","level":"info","event":"📊 Loaded 8809 rows with PySpark","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:02.617018Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:02.617234Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:02.617327Z","level":"info","event":"PYSPARK OPERATIONS","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:02.617395Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:02.870211Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:02.870424Z","level":"info","event":"1. GroupBy aggregation:","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:02.870520Z","level":"info","event":"   TV Show: 2676","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:02.870602Z","level":"info","event":"   William Wyler: 1","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:02.870669Z","level":"info","event":"   None: 1","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:02.870732Z","level":"info","event":"   Movie: 6131","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:03.064678Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:03.065018Z","level":"info","event":"2. Filter operations:","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:03.065287Z","level":"info","event":"   Movies: 6131","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:03.065461Z","level":"info","event":"   TV Shows: 2676","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:03.146470Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:03.146827Z","level":"info","event":"3. Cleaned data: 8809 rows","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:03.146996Z","level":"info","event":"============================================================","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:03.147113Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:03.617311Z","level":"info","event":"✅ Processing complete! Saved to: /opt/airflow/data/processed/netflix_spark_processed.csv","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:03.617547Z","level":"info","event":"Done. Returned value was: /opt/airflow/data/processed/netflix_spark_processed.csv","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":218}
+{"timestamp":"2025-11-04T07:05:03.617733Z","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019a4dae-e4cb-7106-ad7f-9c2b97591b16'), task_id='process_with_pyspark', dag_id='netflix_spark_pipeline', run_id='manual__2025-11-04T07:04:58.813859+00:00', try_number=1, dag_version_id=UUID('019a4dae-b0c0-7e89-9123-2326335d8305'), map_index=-1, hostname='e7e3718d922e', context_carrier={}, task=<Task(_PythonDecoratedOperator): process_with_pyspark>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=1, start_date=datetime.datetime(2025, 11, 4, 7, 4, 59, 359951, tzinfo=datetime.timezone.utc), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task","filename":"task_runner.py","lineno":1352}

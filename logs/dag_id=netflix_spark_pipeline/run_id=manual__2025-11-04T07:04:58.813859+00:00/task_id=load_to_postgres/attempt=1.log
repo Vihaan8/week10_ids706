@@ -1,0 +1,5 @@
+{"timestamp":"2025-11-04T07:05:03.769453Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-11-04T07:05:03.769713Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/netflix_pipeline_spark.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-11-04T07:05:03.782932Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/netflix_pipeline_spark.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2025-11-04T07:05:04.668060Z","level":"info","event":"✅ Loaded 8809 PySpark-processed records to database","logger":"task.stdout"}
+{"timestamp":"2025-11-04T07:05:04.668523Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":218}
